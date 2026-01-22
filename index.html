@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ASAC Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <span>ASAC Editor</span>
+    </div>
+
+    <div class="actions">
+      <label class="btn ghost">
+        <input id="fileInput" type="file" accept=".txt,text/plain" />
+        choose file
+      </label>
+
+      <button id="saveBtn" class="btn primary" disabled>
+        save
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card intro" id="dropZone" tabindex="0" role="button" aria-label="put in file with drag and dr op">
+      <div class="icon">
+        <div class="paper"></div>
+      </div>
+      <div class="introText">
+        <h1>Datei hochladen & bearbeiten</h1>
+        <p>
+          put in <b>.txt</b>-Choose your file or create a new
+          After that you can edit your file
+        </p>
+        <div class="meta">
+          <span id="fileName" class="pill">Keine Datei geladen</span>
+          <span id="status" class="pill subtle">Bereit</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card editor">
+      <div class="editorHeader">
+        <div class="left">
+          <span class="label">Editor</span>
+          <span id="charCount" class="count">0 Zeichen</span>
+        </div>
+
+        <div class="right">
+          <button id="clearBtn" class="btn tiny ghost" disabled>Leeren</button>
+          <button id="copyBtn" class="btn tiny ghost" disabled>Kopieren</button>
+        </div>
+      </div>
+
+      <textarea id="textArea" spellcheck="false" placeholder="upload an text or click here"></textarea>
+      <div class="hint">Tip: Strl/Cmd + S also saves.</div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
