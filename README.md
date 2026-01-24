@@ -99,5 +99,4 @@ Feel free to open issues or submit pull requests.
 
 ## 📜 License
 
-This project currently has no license specified.  
-If you want, a standard MIT license can be added.
+This Project have a GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
