@@ -3,7 +3,6 @@ name: Code Review
 permissions:
   contents: read
   pull-requests: write
-  models: true
 
 on:
   pull_request:
@@ -18,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           # GitHub Models Configuration
-          USE_GITHUB_MODELS: true
+          USE_GITHUB_MODELS: github
           MODEL: gpt-4o
 
           # Language and Behavior
